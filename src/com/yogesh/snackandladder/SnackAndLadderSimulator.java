@@ -2,19 +2,19 @@ package com.yogesh.snackandladder;
 
 public class SnackAndLadderSimulator {
 	
-	private static final int START_POSITION = 0 ;
+	private int player_position = 0 ;
 	
-	public static void gamePlay()
+	public void showPosition()
 	{
-		System.out.println("Starting Position :" + START_POSITION);
+		System.out.println("player Position :" + player_position );
 	}
 
 	public static void main(String[] args) {
 	
 		System.out.println("Welcome To Snack and Ladder Simulator");
 		
-		gamePlay();
-
+		SnackAndLadderSimulator snackandladdersimulator = new SnackAndLadderSimulator();
+		 snackandladdersimulator.showPosition();
 	}
 
 }
