@@ -13,17 +13,17 @@ public class SnackAndLadderSimulator {
 	
 	public void showPosition()
 	{
-		System.out.println("Player Position :" + player_position + "\n" );
+		System.out.println("Welcome To Snack and Ladder Simulator");
+		System.out.println("Player Position :" + player_position );
 	}
 	
 	public void playGame()
 	{
 		showPosition();
 		
-		int player_position = 0 ; 
 		final int RESTART_POSITION = 0;
 		
-		while(player_position != WINNING_POSITION ) {
+		while(true) {
 			
 				int die ;
 				int option ;				
@@ -55,6 +55,18 @@ public class SnackAndLadderSimulator {
 	 					break ;
 				}
 				
+
+				if(player_position >  WINNING_POSITION )
+				{	
+					player_position -= die ; 
+				}
+					
+				if(player_position ==  WINNING_POSITION)
+				{
+					System.out.println("player position :" + player_position);
+					break ;
+				}
+				
 				System.out.println("Player Position : " + player_position);
 				System.out.println("...............");
 		}
@@ -64,8 +76,6 @@ public class SnackAndLadderSimulator {
 	}
 	
 	public static void main(String[] args) {
-	
-		System.out.println("Welcome To Snack and Ladder Simulator");
 		
 		SnackAndLadderSimulator snackandladdersimulator = new SnackAndLadderSimulator();
 		snackandladdersimulator.playGame();
