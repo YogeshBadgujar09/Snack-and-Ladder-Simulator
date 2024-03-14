@@ -22,6 +22,7 @@ public class SnackAndLadderSimulator {
 		showPosition();
 		
 		final int RESTART_POSITION = 0;
+		int die_No = 0;
 		
 		while(true) {
 			
@@ -30,7 +31,9 @@ public class SnackAndLadderSimulator {
 				
 				Random random = new Random();
 				die = random.nextInt(6)+1;
-				System.out.println("Die No :" + die);
+				System.out.println("Die :" + die);
+				
+				die_No++ ;
 				
 				option = random.nextInt(3);
 				
@@ -54,8 +57,7 @@ public class SnackAndLadderSimulator {
 	 						}
 	 					break ;
 				}
-				
-
+								
 				if(player_position >  WINNING_POSITION )
 				{	
 					player_position -= die ; 
@@ -64,6 +66,8 @@ public class SnackAndLadderSimulator {
 				if(player_position ==  WINNING_POSITION)
 				{
 					System.out.println("player position :" + player_position);
+					System.out.println("***********************\n************************");
+					System.out.println("No of Die :" + die_No);
 					break ;
 				}
 				
